@@ -1,0 +1,38 @@
+
+  data types:
+    - name: mhs 1b
+      mapping: bufrtest_mhs_basic_mapping.yaml
+      operations:
+          - type: categorize
+            parameters:
+              shortcuts: [satellite id]
+      paths:
+          - b021/xx027
+
+      - name: mhs 1c
+        mapping: bufrtest_mhs_basic_mapping.yaml
+        operations:
+          - type: categorize
+            parameters:
+              shortcuts: [ satellite id ]
+        paths:
+          - b021/xx036
+
+      - name: hirs 3
+        mapping: bufrtest_hrs_basic_mapping.yaml
+        operations:
+          - type: categorize
+            parameters:
+              shortcuts: [ satellite id ]
+        paths:
+          - b021/xx028
+
+      - name: hirs 4
+        mapping: bufrtest_hrs_basic_mapping.yaml
+        operations:
+            - type: categorize
+              parameters:
+                shortcuts: [satellite id]
+        paths:
+            - b021/xx035
+
