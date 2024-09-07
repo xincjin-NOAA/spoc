@@ -26,7 +26,6 @@ encoder:
     - name: Channel
       paths:
         - "*/BRIT"
-        - "*/BRITCSTC"
       source: variables/channel
 
   variables:
