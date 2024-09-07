@@ -3,36 +3,36 @@
 data types:
   - name: mhs_1b
     mapping: mhs_mapping.yaml
-#    operations:
-#        - type: categorize
-#          parameters:
-#            shortcuts: [satellite id]
+    operations:
+        - type: categorize
+          parameters:
+            shortcuts: [satellite id]
     paths:
         - b021/xx027
 
   - name: mhs_1c
     mapping: mhs_mapping.yaml
-#    operations:
-#      - type: categorize
-#        parameters:
-#          shortcuts: [ satellite id ]
+    operations:
+      - type: categorize
+        parameters:
+          shortcuts: [ satellite id ]
     paths:
       - b021/xx036
 
   - name: hirs_3
     mapping: hrs_mapping.yaml
-#    operations:
-#      - type: categorize
-#        parameters:
-#          shortcuts: [ satellite id ]
+    operations:
+      - type: categorize
+        parameters:
+          shortcuts: [ satellite id ]
     paths:
       - b021/xx035
 
   - name: hirs_4
     mapping: hrs_mapping.yaml
-#    operations:
-#        - type: categorize
-#          parameters:
-#            shortcuts: [satellite id]
+    operations:
+        - type: categorize
+          parameters:
+            shortcuts: [satellite id]
     paths:
         - b021/xx028
