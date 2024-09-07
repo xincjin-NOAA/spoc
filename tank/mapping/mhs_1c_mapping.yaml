@@ -11,19 +11,12 @@ bufr:
         minute: "*/MINU"
         second: "*/SECO"
     latitude:
-      query: "*/CLAT"
+      query: "*/CLATH"
     longitude:
-      query: "*/CLON"
+      query: "*/CLONH"
     height:
-      query: "*/HMSL"
+      query: "*/SELV"
       type: float
-    hols:
-      query: "*/HOLS"
-      type: float
-    fovn:
-      query: "*/FOVN"
-    lsql:
-      query: "*/LSQL"
     sza:
       query: "*/SOZA"
     saz:
@@ -33,9 +26,9 @@ bufr:
     vaz:
       query: "*/BEARAZ"
     channels:
-      query: "[*/BRITCSTC/CHNM, */BRIT/CHNM]"
+      query: "*/ATNCHV/INCN"
     brightnessTemp:
-      query: "[*/BRITCSTC/TMBR, */BRIT/TMBR]"
+      query: "*/ATNCHV/TMBRST"
 
 encoder:
   type: netcdf
@@ -43,23 +36,13 @@ encoder:
   dimensions:
     - name: Channel
       paths:
-        - "*/BRIT"
-        - "*/BRITCSTC"
+        - "*/ATNCHV"
       source: variables/channels
 
   globals:
-
     - name: "platformCommonName"
       type: string
-      value: "MHS"
-
-    - name: "platformLongDescription"
-      type: string
-      value: "MTYP 021-027 PROCESSED MHS Tb (NOAA-18-19, METOP-1,2)"
-
-    - name: "sensorCentralFrequency"
-      type: floatVector
-      value: [89.0, 157.0, 183.311, 183.311, 190.311]
+      value: "MHS 1C"
 
   variables:
 
@@ -84,19 +67,6 @@ encoder:
       source: variables/height
       longName: "height"
       units: "m"
-
-    - name: "MetaData/heightOfSurface"
-      source: variables/hols
-      longName: "Height of Land Surface"
-      units: "m"
-
-    - name: "MetaData/fieldOfViewNumber"
-      source: variables/fovn
-      longName: "Field of View Number"
-
-    - name: "MetaData/landSeaQualifier"
-      source: variables/lsql
-      longName: "Land/Sea Qualifier"
 
     - name: "MetaData/solarZenithAngle"
       source: variables/sza
@@ -130,4 +100,3 @@ encoder:
       range: [120, 500]
       chunks: [1000, 5]
       compressionLevel: 4
-

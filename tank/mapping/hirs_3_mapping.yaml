@@ -11,13 +11,13 @@ bufr:
         minute: "*/MINU"
         second: "*/SECO"
     longitude:
-      query: "*/CLON"
+      query: "*/CLONH"
     latitude:
-      query: "*/CLAT"
+      query: "*/CLATH"
     channel:
-      query: "[*/BRITCSTC/CHNM, */BRIT/CHNM]"
+      query: "*/ATNCHV/INCN"
     brightnessTemp:
-      query: "[*/BRITCSTC/TMBR, */BRIT/TMBR]"
+      query: "*/ATNCHV/TMBRST"
 
 encoder:
   type: netcdf
@@ -25,8 +25,7 @@ encoder:
   dimensions:
     - name: Channel
       paths:
-        - "*/BRIT"
-        - "*/BRITCSTC"
+        - "*/ATNCHV"
       source: variables/channel
 
   variables:
