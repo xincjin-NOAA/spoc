@@ -20,7 +20,7 @@ data types:
       - b021/xx036
 
   - name: hirs_3
-    mapping: hrs_3_mapping.yaml
+    mapping: hirs_3_mapping.yaml
     operations:
       - type: categorize
         parameters:
@@ -29,7 +29,7 @@ data types:
       - b021/xx035
 
   - name: hirs_4
-    mapping: hrs_4_mapping.yaml
+    mapping: hirs_4_mapping.yaml
     operations:
         - type: categorize
           parameters:
