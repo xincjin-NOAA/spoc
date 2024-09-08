@@ -36,3 +36,12 @@ data types:
             shortcuts: [satellite id]
     paths:
         - b021/xx028
+
+  - name: mtiasi
+    mapping: mtiasi_mapping.yaml
+    operations:
+        - type: categorize
+          parameters:
+            shortcuts: [satellite id]
+    paths:
+        - b021/xx028
