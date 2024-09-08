@@ -80,14 +80,14 @@ bufr:
         scaleFactor: "*/IASIL1CB/CHSF"
         scaledSpectralRadiance: "*/IASICHN/SCRA"
 
-  splits:
-    satId:
-      category:
-        variable: satelliteId
-        map:
-          _3: metop-b
-          _4: metop-a
-          _5: metop-c
+#  splits:
+#    satId:
+#      category:
+#        variable: satelliteId
+#        map:
+#          _3: metop-b
+#          _4: metop-a
+#          _5: metop-c
 
 encoder:
   type: netcdf
