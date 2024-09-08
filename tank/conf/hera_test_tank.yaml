@@ -2,7 +2,7 @@
 
 data types:
   - name: mhs_1b
-    mapping: mhs_mapping.yaml
+    mapping: mhs_1b_mapping.yaml
     operations:
         - type: categorize
           parameters:
@@ -11,7 +11,7 @@ data types:
         - b021/xx027
 
   - name: mhs_1c
-    mapping: mhs_mapping.yaml
+    mapping: mhs_1c_mapping.yaml
     operations:
       - type: categorize
         parameters:
@@ -29,7 +29,7 @@ data types:
       - b021/xx035
 
   - name: hirs_4
-    mapping: hrs_3_mapping.yaml
+    mapping: hrs_4_mapping.yaml
     operations:
         - type: categorize
           parameters:
