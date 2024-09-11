@@ -31,17 +31,29 @@ data types:
   - name: hirs_4
     mapping: hirs_4_mapping.yaml
     operations:
-        - type: categorize
-          parameters:
-            shortcuts: [satellite id]
+      - type: categorize
+        parameters:
+          shortcuts: [satellite id]
     paths:
-        - b021/xx028
+      - b021/xx028
 
   - name: mtiasi
     mapping: mtiasi_mapping.yaml
     operations:
-        - type: categorize
-          parameters:
-            shortcuts: [satellite id]
+      - type: categorize
+        parameters:
+          shortcuts: [satellite id]
     paths:
-        - b021/xx239
+      - b021/xx239
+
+  - name: adpupa
+    mapping: adpupa_mapping.yaml
+    operations:
+      - type: categorize
+        parameters:
+          shortcuts: [satellite id]
+    paths:
+      - b002/xx101
+      - b002/xx102
+      - b002/xx103
+        
