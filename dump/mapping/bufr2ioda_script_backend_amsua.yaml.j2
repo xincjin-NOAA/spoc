@@ -1,0 +1,20 @@
+time window:
+  begin: "2024-01-14T21:00:00Z"
+  end: "2024-12-15T03:00:00Z"
+
+observations:
+  - obs space:
+      name: "amsua_n19"
+      simulated variables: ["brightnessTemperature"]
+      obsdatain:
+        engine:
+          type: script
+          script file: "/work2/noaa/da/xinjin/git/global_workflow/sorc/gdas.cd/ush/ioda/bufr2ioda/pybufr2ioda_amsua.py"
+          args:
+            input_path1: "{{ DMPDIR }}/{{ RUN }}.{{ PDY }}/{{ cyc }}/atmos/{{ RUN }}.t{{ cyc }}z.esamua.tm00.bufr_d"
+            input_path2: "{{ DMPDIR }}/{{ RUN }}.{{ PDY }}/{{ cyc }}/atmos/{{ RUN }}.t{{ cyc }}z.1bamua.tm00.bufr_d"
+            category: "n19"
+      obsdataout:
+        engine:
+          type: H5File
+          obsfile:  "{{ COM_OBS }}/{{ RUN }}.t{{ cyc }}z.amsua_n19.tm00.nc"
